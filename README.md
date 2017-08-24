@@ -1,5 +1,7 @@
 # Toqua
 
+[![Build Status](https://travis-ci.org/rogercampos/toqua.svg?branch=master)](https://travis-ci.org/rogercampos/toqua)
+
 Collection of controller utilities for rails applications. Created with the intention of bringing back most of the nice things
 about inherited resources, but in a more simple and explicit way.  
 
