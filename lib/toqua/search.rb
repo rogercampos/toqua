@@ -1,3 +1,5 @@
+require 'recursive-open-struct'
+
 module Toqua
   module Search
     extend ActiveSupport::Concern
@@ -8,7 +10,7 @@ module Toqua
     end
 
     def search_params
-      params[:q].permit!
+      params[:q].permit! if params[:q]
       (params[:q] || {}).to_h.reverse_merge(default_search_params)
     end
 
@@ -18,7 +20,7 @@ module Toqua
 
     def search_object
       @search_object ||= begin
-        Class.new(Hashie::Mash) do
+        Class.new(RecursiveOpenStruct) do
           extend ActiveModel::Naming
 
           def self.model_name

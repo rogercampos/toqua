@@ -71,7 +71,7 @@ class KeysetPaginationTest < BaseTest
 
     assert_equal expected_order[3][:id], response.headers["X-KeysetPagination-Index"]
     assert_equal expected_order[6][:id], response.headers["X-KeysetPagination-Next-Index"]
-    assert_equal -1, response.headers["X-KeysetPagination-Prev-Index"] # -1 marks previous is first page and shouldn't include index parameter
+    assert_equal(-1, response.headers["X-KeysetPagination-Prev-Index"]) # -1 marks previous is first page and shouldn't include index parameter
   end
 
   test "headers indexes next/prev indexes on first page" do

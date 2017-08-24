@@ -11,6 +11,7 @@ module Toqua
             attr_name, direction = params[:s].to_s.split("+").map(&:strip)
             raise "You must provide an attribute to sort by" unless attr_name
             raise "You must provide a direction" unless direction
+
             direction.downcase!
             raise "Direction must be ASC or DESC" unless ["asc", "desc"].include?(direction)
 

@@ -132,7 +132,7 @@ Finally, the method `paginated?` available in both the controller and the views 
 
 ### Search
 
-Small utility to help in the implementation of searching, using [Doure](https://github.com/rogercampos/doure) as a way to filter an AR model. Given that you have a model with filters defined, ex:
+Small utility to help in the implementation of searching, using [Doure](https://github.com/rogercampos/doure) as a way to filter an AR model. You'll also need to include [recursive struct](https://github.com/aetherknight/recursive-open-struct) as a dependency to use search. Given that you have a model with filters defined, ex:
 
 ```ruby
 class Post < ApplicationRecord
@@ -193,6 +193,7 @@ def default_search_params
 end
 ```
 
+As a final note, remember to take care of properly sanitize the input of your search criteria to avoid unintended usage, using TransformParams as seen before or by any other means. Toqua doesn't apply any sanitization by default, since the values that may come from the view can vary between use cases (strings, arrays, hashes, etc.). 
 
 
 ### Sorting

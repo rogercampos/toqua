@@ -30,4 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest-rails"
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "order_query", ">= 0.3.4"
+  spec.add_development_dependency "recursive-open-struct"
 end
