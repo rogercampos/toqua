@@ -132,7 +132,7 @@ Finally, the method `paginated?` available in both the controller and the views 
 
 ### Search
 
-Small utility to help in the implementation of searching, using [Doure](https://github.com/rogercampos/doure) as a way to filter an AR model. You'll also need to include [recursive struct](https://github.com/aetherknight/recursive-open-struct) as a dependency to use search. Given that you have a model with filters defined, ex:
+Small utility to help in the implementation of searching, using [Doure](https://github.com/rogercampos/doure) as a way to filter an AR model. Given that you have a model with filters defined, ex:
 
 ```ruby
 class Post < ApplicationRecord

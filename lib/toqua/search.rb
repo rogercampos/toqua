@@ -1,5 +1,3 @@
-require 'recursive-open-struct'
-
 module Toqua
   module Search
     extend ActiveSupport::Concern
