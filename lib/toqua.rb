@@ -1,6 +1,7 @@
 require "toqua/version"
 
 require 'active_support/all'
+require 'recursive-open-struct'
 
 require 'toqua/scoping'
 require 'toqua/pagination'
